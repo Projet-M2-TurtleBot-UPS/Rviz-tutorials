@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/nr-1044.js"></script><script type="text/javascript" async="" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/ga.js"></script><script src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGktDXR8bHQ==","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":200}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>rviz/Tutorials/Interactive Markers: Writing a Simple Interactive Marker Server - ROS Wiki</title>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=print">
+<link rel="Up" href="http://wiki.ros.org/rviz/Tutorials">
+<link rel="Appendix" title="simple_marker.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=AttachFile&amp;do=view&amp;target=simple_marker.png">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_10year_montage'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="https://events.osrfoundation.org/civicrm/?page=CiviCRM&q=civicrm/petition/sign&sid=9&reset=1">Submit your video clips to be included in the ROS 10 Year Montage!<br>
+      The deadline for submission is October 15th.</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" height="51" border="0" width="238"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_left.png" alt="" height="53" width="17"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" height="53" border="0" width="237"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/browse/"><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" height="53" border="0" width="268"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/news"><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_news.png" alt="News" height="53" border="0" width="84"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://wiki.ros.org/ROS/Installation"><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" height="53" border="0" width="151"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/menu_right.png" height="53" width="60"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/rviz">rviz</a></li><li><a href="http://wiki.ros.org/rviz/Tutorials">Tutorials</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=fullsearch&amp;context=180&amp;value=linkto%3A%22rviz%2FTutorials%2FInteractive+Markers%3A+Writing+a+Simple+Interactive+Marker+Server%22" rel="nofollow" title="Click to do a full-text search for this title">Interactive Markers: Writing a Simple Interactive Marker Server</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server">Interactive...rker Server</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/rviz/Tutorials/Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867"><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span></p><div><table><tbody><tr>  <td style="background-color: #cce0ff"><strong>Note:</strong> This tutorial assumes that you have completed the previous tutorials:   <a href="http://wiki.ros.org/ROS/Tutorials">ROS Tutorials</a>. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span><span class="anchor" id="line-6-1"></span><div><table><tbody><tr>  <td style="background-color: #bbceee"> <img alt="(!)" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/idea.png" title="(!)" height="15" width="15"> Please ask about problems and questions regarding this tutorial on <a class="http" href="http://answers.ros.org/">answers.ros.org</a>.
+ Don't forget to include in your question the link to this page, the 
+versions of your OS &amp; ROS, and also add appropriate tags.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span><span class="anchor" id="line-9-1"></span>
+<h1 id="Interactive_Markers:_Writing_a_Simple_Interactive_Marker_Server">Interactive Markers: Writing a Simple Interactive Marker Server</h1>
+<span class="anchor" id="line-10-1"></span><strong>Description:</strong> This tutorial explains how to setup a minimalist server which manages a single interactive marker.<br>
+<br>
+ <span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><span class="anchor" id="line-14-1"></span><strong>Tutorial Level:</strong> BEGINNER<br>
+ <br>
+ <span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><strong>Next Tutorial:</strong>   <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Basic%20Controls">Interactive Markers: Basic Controls</a> <br>
+ <br>
+  <span class="anchor" id="line-17-1"></span><p class="line874"> <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#The_simple_marker_tutorial_explained">The simple_marker tutorial explained</a></li></ol></div><p class="line874"> <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></p><p class="line867">
+</p><h2 id="The_simple_marker_tutorial_explained">The simple_marker tutorial explained</h2>
+<span class="anchor" id="line-25"></span><p class="line862">If you run the simple_marker example from <a href="http://wiki.ros.org/interactive_marker_tutorials">interactive_marker_tutorials</a> as described in the <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started">previous tutorial</a>, you will see this in RViz: <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span></p><p class="line867"><img alt="The simple_marker example showing in RViz" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Writing%252520a%252520Simple%252520Int.png" title="The simple_marker example showing in RViz" width="100%"> <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span></p><p class="line874">It
+ shows the single interactive marker provided by the server node. Click 
+on the arrow to move the box. What you will also see is that the server 
+node prints out the current position of the marker each time you change 
+it in RViz. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span></p><p class="line874">This is the code of the server node: <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></p><p class="line867"><span class="anchor" id="line-1-2"></span><em><a class="https" href="https://raw.githubusercontent.com/ros-visualization/visualization_tutorials/indigo-devel/interactive_marker_tutorials/src/simple_marker.cpp">https://raw.githubusercontent.com/ros-visualization/visualization_tutorials/indigo-devel/interactive_marker_tutorials/src/simple_marker.cpp</a></em> <span class="anchor" id="line-2-2"></span><span class="anchor" id="line-3-2"></span><span class="anchor" id="line-4-2"></span><span class="anchor" id="line-5-2"></span><span class="anchor" id="line-6-2"></span><span class="anchor" id="line-7-2"></span><span class="anchor" id="line-8-2"></span><span class="anchor" id="line-9-2"></span><span class="anchor" id="line-10-2"></span><span class="anchor" id="line-11-2"></span><span class="anchor" id="line-12-2"></span><span class="anchor" id="line-13-2"></span><span class="anchor" id="line-14-2"></span><span class="anchor" id="line-15-2"></span><span class="anchor" id="line-16-2"></span><span class="anchor" id="line-17-2"></span><span class="anchor" id="line-18-1"></span><span class="anchor" id="line-19-1"></span><span class="anchor" id="line-20-1"></span><span class="anchor" id="line-21-1"></span><span class="anchor" id="line-22-1"></span><span class="anchor" id="line-23-1"></span><span class="anchor" id="line-24-1"></span><span class="anchor" id="line-25-1"></span><span class="anchor" id="line-26-1"></span><span class="anchor" id="line-27-1"></span><span class="anchor" id="line-28-1"></span><span class="anchor" id="line-29-1"></span><span class="anchor" id="line-30-1"></span><span class="anchor" id="line-31-1"></span><span class="anchor" id="line-32-1"></span><span class="anchor" id="line-33-1"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-1-3"></span><span class="anchor" id="line-2-3"></span><span class="anchor" id="line-3-3"></span><span class="anchor" id="line-4-3"></span><span class="anchor" id="line-5-3"></span><span class="anchor" id="line-6-3"></span><span class="anchor" id="line-7-3"></span><span class="anchor" id="line-8-3"></span><span class="anchor" id="line-9-3"></span><span class="anchor" id="line-10-3"></span><span class="anchor" id="line-11-3"></span><span class="anchor" id="line-12-3"></span><span class="anchor" id="line-13-3"></span><span class="anchor" id="line-14-3"></span><span class="anchor" id="line-15-3"></span><span class="anchor" id="line-16-3"></span><span class="anchor" id="line-17-3"></span><span class="anchor" id="line-18-2"></span><span class="anchor" id="line-19-2"></span><span class="anchor" id="line-20-2"></span><span class="anchor" id="line-21-2"></span><span class="anchor" id="line-22-2"></span><span class="anchor" id="line-23-2"></span><span class="anchor" id="line-24-2"></span><span class="anchor" id="line-25-2"></span><span class="anchor" id="line-26-2"></span><span class="anchor" id="line-27-2"></span><span class="anchor" id="line-28-2"></span><span class="anchor" id="line-29-2"></span><span class="anchor" id="line-30-2"></span><span class="anchor" id="line-31-2"></span><span class="anchor" id="line-32-2"></span><span class="anchor" id="line-33-2"></span><span class="anchor" id="line-34-1"></span><span class="anchor" id="line-35-1"></span><span class="anchor" id="line-36-1"></span><span class="anchor" id="line-37-1"></span><span class="anchor" id="line-38-1"></span><span class="anchor" id="line-39-1"></span><span class="anchor" id="line-40-1"></span><span class="anchor" id="line-41-1"></span><span class="anchor" id="line-42-1"></span><span class="anchor" id="line-43-1"></span><span class="anchor" id="line-44-1"></span><span class="anchor" id="line-45-1"></span><span class="anchor" id="line-46-1"></span><span class="anchor" id="line-47-1"></span><span class="anchor" id="line-48-1"></span><span class="anchor" id="line-49-1"></span><span class="anchor" id="line-50-1"></span><span class="anchor" id="line-51-1"></span><span class="anchor" id="line-52-1"></span><span class="anchor" id="line-53-1"></span><span class="anchor" id="line-54-1"></span><span class="anchor" id="line-55-1"></span><span class="anchor" id="line-56-1"></span><span class="anchor" id="line-57-1"></span><span class="anchor" id="line-58-1"></span><span class="anchor" id="line-59-1"></span><span class="anchor" id="line-60-1"></span><span class="anchor" id="line-61-1"></span><span class="anchor" id="line-62-1"></span><span class="anchor" id="line-63-1"></span><span class="anchor" id="line-64-1"></span><span class="anchor" id="line-65-1"></span><span class="anchor" id="line-66-1"></span><span class="anchor" id="line-67-1"></span><span class="anchor" id="line-68-1"></span><span class="anchor" id="line-69-1"></span><span class="anchor" id="line-70-1"></span><span class="anchor" id="line-71-1"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span></p><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a\', 97, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script><a href="#" onclick="return togglenumber('CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a', 97, 1);" class="codenumbers">Toggle line numbers</a>
+<pre dir="ltr" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_97">  97</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_97"></span><span class="anchor" id="line-1-4"></span><span class="Preprc">#</span><span class="Preprc">include &lt;ros</span><span class="Preprc">/</span><span class="Preprc">ros.h&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_98">  98</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_98"></span><span class="anchor" id="line-2-4"></span><span class="Preprc"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_99">  99</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_99"></span><span class="anchor" id="line-3-4"></span><span class="Preprc">#</span><span class="Preprc">include &lt;interactive_markers</span><span class="Preprc">/</span><span class="Preprc">interactive_marker_server.h&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_100"> 100</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_100"></span><span class="anchor" id="line-4-4"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_101"> 101</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_101"></span><span class="anchor" id="line-5-4"></span><span class="ResWord">void</span> <span class="ID">processFeedback</span>(</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_102"> 102</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_102"></span><span class="anchor" id="line-6-4"></span>    <span class="ResWord">const</span> <span class="ID">visualization_msgs</span>::<span class="ID">InteractiveMarkerFeedbackConstPtr</span> &amp;<span class="ID">feedback</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_103"> 103</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_103"></span><span class="anchor" id="line-7-4"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_104"> 104</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_104"></span><span class="anchor" id="line-8-4"></span>  <span class="ID">ROS_INFO_STREAM</span>( <span class="ID">feedback</span>-&gt;<span class="ID">marker_name</span> &lt;&lt; <span class="String">"</span><span class="String"> is now at </span><span class="String">"</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_105"> 105</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_105"></span><span class="anchor" id="line-9-4"></span>      &lt;&lt; <span class="ID">feedback</span>-&gt;<span class="ID">pose</span>.<span class="ID">position</span>.<span class="ID">x</span> &lt;&lt; <span class="String">"</span><span class="String">, </span><span class="String">"</span> &lt;&lt; <span class="ID">feedback</span>-&gt;<span class="ID">pose</span>.<span class="ID">position</span>.<span class="ID">y</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_106"> 106</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_106"></span><span class="anchor" id="line-10-4"></span>      &lt;&lt; <span class="String">"</span><span class="String">, </span><span class="String">"</span> &lt;&lt; <span class="ID">feedback</span>-&gt;<span class="ID">pose</span>.<span class="ID">position</span>.<span class="ID">z</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_107"> 107</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_107"></span><span class="anchor" id="line-11-4"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_108"> 108</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_108"></span><span class="anchor" id="line-12-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_109"> 109</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_109"></span><span class="anchor" id="line-13-4"></span><span class="ResWord">int</span> <span class="ID">main</span>(<span class="ResWord">int</span> <span class="ID">argc</span>, <span class="ResWord">char</span>** <span class="ID">argv</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_110"> 110</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_110"></span><span class="anchor" id="line-14-4"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_111"> 111</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_111"></span><span class="anchor" id="line-15-4"></span>  <span class="ID">ros</span>::<span class="ID">init</span>(<span class="ID">argc</span>, <span class="ID">argv</span>, <span class="String">"</span><span class="String">simple_marker</span><span class="String">"</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_112"> 112</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_112"></span><span class="anchor" id="line-16-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_113"> 113</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_113"></span><span class="anchor" id="line-17-4"></span>  <span class="Comment">// create an interactive marker server on the topic namespace simple_marker</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_114"> 114</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_114"></span><span class="anchor" id="line-18-3"></span><span class="Comment"></span>  <span class="ID">interactive_markers</span>::<span class="ID">InteractiveMarkerServer</span> <span class="ID">server</span>(<span class="String">"</span><span class="String">simple_marker</span><span class="String">"</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_115"> 115</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_115"></span><span class="anchor" id="line-19-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_116"> 116</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_116"></span><span class="anchor" id="line-20-3"></span>  <span class="Comment">// create an interactive marker for our server</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_117"> 117</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_117"></span><span class="anchor" id="line-21-3"></span><span class="Comment"></span>  <span class="ID">visualization_msgs</span>::<span class="ID">InteractiveMarker</span> <span class="ID">int_marker</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_118"> 118</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_118"></span><span class="anchor" id="line-22-3"></span>  <span class="ID">int_marker</span>.<span class="ID">header</span>.<span class="ID">frame_id</span> = <span class="String">"</span><span class="String">base_link</span><span class="String">"</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_119"> 119</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_119"></span><span class="anchor" id="line-23-3"></span>  <span class="ID">int_marker</span>.<span class="ID">header</span>.<span class="ID">stamp</span>=<span class="ID">ros</span>::<span class="ID">Time</span>::<span class="ID">now</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_120"> 120</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_120"></span><span class="anchor" id="line-24-3"></span>  <span class="ID">int_marker</span>.<span class="ID">name</span> = <span class="String">"</span><span class="String">my_marker</span><span class="String">"</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_121"> 121</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_121"></span><span class="anchor" id="line-25-3"></span>  <span class="ID">int_marker</span>.<span class="ID">description</span> = <span class="String">"</span><span class="String">Simple 1-DOF Control</span><span class="String">"</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_122"> 122</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_122"></span><span class="anchor" id="line-26-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_123"> 123</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_123"></span><span class="anchor" id="line-27-3"></span>  <span class="Comment">// create a grey box marker</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_124"> 124</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_124"></span><span class="anchor" id="line-28-3"></span><span class="Comment"></span>  <span class="ID">visualization_msgs</span>::<span class="ID">Marker</span> <span class="ID">box_marker</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_125"> 125</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_125"></span><span class="anchor" id="line-29-3"></span>  <span class="ID">box_marker</span>.<span class="ID">type</span> = <span class="ID">visualization_msgs</span>::<span class="ID">Marker</span>::<span class="ID">CUBE</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_126"> 126</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_126"></span><span class="anchor" id="line-30-3"></span>  <span class="ID">box_marker</span>.<span class="ID">scale</span>.<span class="ID">x</span> = <span class="Number">0.45</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_127"> 127</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_127"></span><span class="anchor" id="line-31-3"></span>  <span class="ID">box_marker</span>.<span class="ID">scale</span>.<span class="ID">y</span> = <span class="Number">0.45</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_128"> 128</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_128"></span><span class="anchor" id="line-32-3"></span>  <span class="ID">box_marker</span>.<span class="ID">scale</span>.<span class="ID">z</span> = <span class="Number">0.45</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_129"> 129</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_129"></span><span class="anchor" id="line-33-3"></span>  <span class="ID">box_marker</span>.<span class="ID">color</span>.<span class="ID">r</span> = <span class="Number">0.5</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_130"> 130</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_130"></span><span class="anchor" id="line-34-2"></span>  <span class="ID">box_marker</span>.<span class="ID">color</span>.<span class="ID">g</span> = <span class="Number">0.5</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_131"> 131</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_131"></span><span class="anchor" id="line-35-2"></span>  <span class="ID">box_marker</span>.<span class="ID">color</span>.<span class="ID">b</span> = <span class="Number">0.5</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_132"> 132</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_132"></span><span class="anchor" id="line-36-2"></span>  <span class="ID">box_marker</span>.<span class="ID">color</span>.<span class="ID">a</span> = <span class="Number">1.0</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_133"> 133</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_133"></span><span class="anchor" id="line-37-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_134"> 134</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_134"></span><span class="anchor" id="line-38-2"></span>  <span class="Comment">// create a non-interactive control which contains the box</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_135"> 135</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_135"></span><span class="anchor" id="line-39-2"></span><span class="Comment"></span>  <span class="ID">visualization_msgs</span>::<span class="ID">InteractiveMarkerControl</span> <span class="ID">box_control</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_136"> 136</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_136"></span><span class="anchor" id="line-40-2"></span>  <span class="ID">box_control</span>.<span class="ID">always_visible</span> = <span class="ConsWord">true</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_137"> 137</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_137"></span><span class="anchor" id="line-41-2"></span>  <span class="ID">box_control</span>.<span class="ID">markers</span>.<span class="ID">push_back</span>( <span class="ID">box_marker</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_138"> 138</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_138"></span><span class="anchor" id="line-42-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_139"> 139</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_139"></span><span class="anchor" id="line-43-2"></span>  <span class="Comment">// add the control to the interactive marker</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_140"> 140</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_140"></span><span class="anchor" id="line-44-2"></span><span class="Comment"></span>  <span class="ID">int_marker</span>.<span class="ID">controls</span>.<span class="ID">push_back</span>( <span class="ID">box_control</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_141"> 141</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_141"></span><span class="anchor" id="line-45-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_142"> 142</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_142"></span><span class="anchor" id="line-46-2"></span>  <span class="Comment">// create a control which will move the box</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_143"> 143</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_143"></span><span class="anchor" id="line-47-2"></span><span class="Comment"></span>  <span class="Comment">// this control does not contain any markers,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_144"> 144</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_144"></span><span class="anchor" id="line-48-2"></span><span class="Comment"></span>  <span class="Comment">// which will cause RViz to insert two arrows</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_145"> 145</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_145"></span><span class="anchor" id="line-49-2"></span><span class="Comment"></span>  <span class="ID">visualization_msgs</span>::<span class="ID">InteractiveMarkerControl</span> <span class="ID">rotate_control</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_146"> 146</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_146"></span><span class="anchor" id="line-50-2"></span>  <span class="ID">rotate_control</span>.<span class="ID">name</span> = <span class="String">"</span><span class="String">move_x</span><span class="String">"</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_147"> 147</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_147"></span><span class="anchor" id="line-51-2"></span>  <span class="ID">rotate_control</span>.<span class="ID">interaction_mode</span> =</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_148"> 148</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_148"></span><span class="anchor" id="line-52-2"></span>      <span class="ID">visualization_msgs</span>::<span class="ID">InteractiveMarkerControl</span>::<span class="ID">MOVE_AXIS</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_149"> 149</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_149"></span><span class="anchor" id="line-53-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_150"> 150</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_150"></span><span class="anchor" id="line-54-2"></span>  <span class="Comment">// add the control to the interactive marker</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_151"> 151</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_151"></span><span class="anchor" id="line-55-2"></span><span class="Comment"></span>  <span class="ID">int_marker</span>.<span class="ID">controls</span>.<span class="ID">push_back</span>(<span class="ID">rotate_control</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_152"> 152</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_152"></span><span class="anchor" id="line-56-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_153"> 153</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_153"></span><span class="anchor" id="line-57-2"></span>  <span class="Comment">// add the interactive marker to our collection &amp;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_154"> 154</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_154"></span><span class="anchor" id="line-58-2"></span><span class="Comment"></span>  <span class="Comment">// tell the server to call processFeedback() when feedback arrives for it</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_155"> 155</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_155"></span><span class="anchor" id="line-59-2"></span><span class="Comment"></span>  <span class="ID">server</span>.<span class="ID">insert</span>(<span class="ID">int_marker</span>, &amp;<span class="ID">processFeedback</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_156"> 156</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_156"></span><span class="anchor" id="line-60-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_157"> 157</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_157"></span><span class="anchor" id="line-61-2"></span>  <span class="Comment">// 'commit' changes and send to all clients</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_158"> 158</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_158"></span><span class="anchor" id="line-62-2"></span><span class="Comment"></span>  <span class="ID">server</span>.<span class="ID">applyChanges</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_159"> 159</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_159"></span><span class="anchor" id="line-63-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_160"> 160</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_160"></span><span class="anchor" id="line-64-2"></span>  <span class="Comment">// start the ROS main loop</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_161"> 161</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_161"></span><span class="anchor" id="line-65-2"></span><span class="Comment"></span>  <span class="ID">ros</span>::<span class="ID">spin</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_162"> 162</a> </span><span class="LineAnchor" id="CA-6fd519edef6017ef5e78cf1ea75cbdc530a58b5a_162"></span><span class="anchor" id="line-66-2"></span>}</span>
+</pre></div></div><span class="anchor" id="line-72-1"></span><p class="line874"> <span class="anchor" id="line-34-3"></span><span class="anchor" id="line-35-3"></span></p><p class="line867"><strong>What this does is the following:</strong> <span class="anchor" id="line-36-3"></span><span class="anchor" id="line-37-3"></span></p><ul><li><p class="line862">Define a function <em>processFeedback</em> which handles feedback messages from RViz by printing out the position. <span class="anchor" id="line-38-3"></span></p></li><li>Initialize roscpp. <span class="anchor" id="line-39-3"></span></li><li>Create an interactive marker server object. <span class="anchor" id="line-40-3"></span></li><li>Setup the interactive marker and add it to the server's collection. <span class="anchor" id="line-41-3"></span></li><li>Enter the ROS message loop. <span class="anchor" id="line-42-3"></span><span class="anchor" id="line-43-3"></span></li></ul><p class="line862">Note that when calling <em>insert</em>, the server object will internally only push the new marker onto a waiting list. Once you call <em>applyChanges</em>, it will incorporate it into it's publicly visible set of interactive markers and send it to all connected clients. <span class="anchor" id="line-44-3"></span><span class="anchor" id="line-45-3"></span></p><p class="line862">That's all there is. You are now ready to go on to the next tutorial: <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Basic%20Controls">Interactive Markers: Basic Controls</a>. <span class="anchor" id="line-46-3"></span><span class="anchor" id="line-47-3"></span></p><p class="line867"><span class="anchor" id="line-48-3"></span></p><p class="line867"><span class="anchor" id="line-49-3"></span></p><p class="line867"><span class="anchor" id="line-50-3"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: rviz/Tutorials/Interactive Markers: Writing a Simple Interactive Marker Server  (last edited 2016-05-24 00:22:47 by <span title="DHood @ 70-35-50-58.static.wiline.com[70.35.50.58]"><a class="nonexistent" href="http://wiki.ros.org/DHood" title="DHood @ 70-35-50-58.static.wiline.com[70.35.50.58]">DHood</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="rviz_Tutorials_Interactive%20Markers:%20Writing%20a%20Simple%20Interactive%20Marker%20Server%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

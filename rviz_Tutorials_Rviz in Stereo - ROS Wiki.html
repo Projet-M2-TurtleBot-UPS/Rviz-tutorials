@@ -1,0 +1,464 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/nr-1044.js"></script><script type="text/javascript" async="" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/ga.js"></script><script src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGktDXR8bHQ==","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":183}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>rviz/Tutorials/Rviz in Stereo - ROS Wiki</title>
+<script type="text/javascript" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/rviz/Tutorials/Rviz%20in%20Stereo">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/rviz/Tutorials/Rviz%20in%20Stereo?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/rviz/Tutorials/Rviz%20in%20Stereo?action=print">
+<link rel="Up" href="http://wiki.ros.org/rviz/Tutorials">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_10year_montage'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="https://events.osrfoundation.org/civicrm/?page=CiviCRM&q=civicrm/petition/sign&sid=9&reset=1">Submit your video clips to be included in the ROS 10 Year Montage!<br>
+      The deadline for submission is October 15th.</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" height="51" border="0" width="238"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_left.png" alt="" height="53" width="17"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" height="53" border="0" width="237"></a><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/browse/"><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" height="53" border="0" width="268"></a><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/news"><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_news.png" alt="News" height="53" border="0" width="84"></a><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://wiki.ros.org/ROS/Installation"><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" height="53" border="0" width="151"></a><img src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/menu_right.png" height="53" width="60"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/rviz">rviz</a></li><li><a href="http://wiki.ros.org/rviz/Tutorials">Tutorials</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/rviz/Tutorials/Rviz%20in%20Stereo?action=fullsearch&amp;context=180&amp;value=linkto%3A%22rviz%2FTutorials%2FRviz+in+Stereo%22" rel="nofollow" title="Click to do a full-text search for this title">Rviz in Stereo</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/rviz/Tutorials/Rviz%20in%20Stereo">Rviz in Stereo</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/rviz/Tutorials/Rviz%20in%20Stereo?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/rviz/Tutorials/Rviz%20in%20Stereo?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/rviz/Tutorials/Rviz%20in%20Stereo">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/rviz/Tutorials/Rviz%20in%20Stereo?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867"><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span></p><div><table><tbody><tr>  <td style="background-color: #bbceee"> <img alt="(!)" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/idea.png" title="(!)" height="15" width="15"> Please ask about problems and questions regarding this tutorial on <a class="http" href="http://answers.ros.org/">answers.ros.org</a>.
+ Don't forget to include in your question the link to this page, the 
+versions of your OS &amp; ROS, and also add appropriate tags.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-6-1"></span><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span>
+<h1 id="Rviz_in_Stereo">Rviz in Stereo</h1>
+<span class="anchor" id="line-9-1"></span><strong>Description:</strong> Teaches how to set up Rviz to render in 3D Stereo.<br>
+<br>
+ <span class="anchor" id="line-10-1"></span><span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><strong>Tutorial Level:</strong>  INTERMEDIATE <br>
+ <br>
+ <span class="anchor" id="line-14-1"></span><span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><p class="line874"> <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#Intro">Intro</a></li><li>
+<a href="#Hardware_Requirements">Hardware Requirements</a><ol><li>
+<a href="#Using_NVIDIA_hardware">Using NVIDIA hardware</a><ol><li>
+<a href="#Special_3D_Monitor">Special 3D Monitor</a></li><li>
+<a href="#A3DVision_glasses">3DVision glasses</a></li></ol></li><li>
+<a href="#Using_AMD_hardware">Using AMD hardware</a></li></ol></li><li>
+<a href="#Setting_up_X_.28in_Linux.29_to_support_stereo">Setting up X (in Linux) to support stereo</a><ol><li>
+<a href="#NVIDIA">NVIDIA</a><ol><li>
+<a href="#Install_binary_drivers">Install binary drivers</a></li><li>
+<a href="#Set_resolution.2C_refresh_rate.2C_and_stereo_mode">Set resolution, refresh rate, and stereo mode</a></li></ol></li></ol></li><li>
+<a href="#Known-working_Stereo_Hardware">Known-working Stereo Hardware</a></li><li>
+<a href="#Testing_stereo_hardware">Testing stereo hardware</a><ol><li>
+<a href="#troubleshooting">troubleshooting</a></li></ol></li><li>
+<a href="#Building_Rviz_to_render_in_stereo">Building Rviz to render in stereo</a><ol><li>
+<a href="#Building_Ogre_for_Stereo">Building Ogre for Stereo</a></li><li>
+<a href="#Building_Rviz_for_Stereo">Building Rviz for Stereo</a></li></ol></li><li>
+<a href="#Adjusting_stereo_properties_in_Rviz">Adjusting stereo properties in Rviz</a></li></ol></div><p class="line874"> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></p><p class="line867">
+</p><h2 id="Intro">Intro</h2>
+<span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line874">3D
+ stereo rendering displays a different view to each eye so that the 
+scene appears to have depth.  If you have a stereo capable monitor and 
+stereo capable graphics card you can get Rviz to render its view in 
+stereo.  This tutorial describes how to accomplish this. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span></p><p class="line867">
+</p><h2 id="Hardware_Requirements">Hardware Requirements</h2>
+<span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line874">To
+ render in stereo you will need a graphics card capable of Quad-buffer 
+stereo.  You may also need a stereo-capable monitor and/or a monitor 
+that can display at 120Hz. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></p><p class="line867">
+</p><h3 id="Using_NVIDIA_hardware">Using NVIDIA hardware</h3>
+<span class="anchor" id="line-37"></span><p class="line862">On Linux NVIDIA Quadro cards support quad buffered stereo.  There is information about which cards support this feature <a class="http" href="http://www.nvidia.com/object/quadro_pro_graphics_boards_linux.html">here on the NVIDIA website</a>. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></p><p class="line862">Also see <a class="http" href="http://www.zib.de/durmaz/3dVision.html">http://www.zib.de/durmaz/3dVision.html</a> or try a web search for other info on "quad buffer stereo linux". <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p><p class="line874">There seem to be 2 options for displays: <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p><p class="line867">
+</p><h4 id="Special_3D_Monitor">Special 3D Monitor</h4>
+<span class="anchor" id="line-44"></span><p class="line874">Get a 
+special monitor that comes with 3DVision glasses and has a built in 
+3DVision IR transmitter.  I have stereo working on an ASUS VG278H 
+monitor with an NVIDIA Quadro K4000 graphics adaptor.  You will need to 
+connect the display directly to the graphics card with a DVI Dual-link 
+cable. (Single link DVI will not work.  Display-port to DVI will not 
+work.  HDMI will not work at 120Hz.)  The monitor comes with active 
+3DVision glasses and has a built in IR transmitter, so you do not need a
+ separate IR transmitter and you do not need a "3 pin mini-din" 
+connector on your graphics card. <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></p><p class="line867">
+</p><h4 id="A3DVision_glasses">3DVision glasses</h4>
+<span class="anchor" id="line-47"></span><p class="line874">Get 3DVision
+ kit with active glasses and an IR transmitter (or 3DVision-Pro glasses 
+with a radio transmitter).  You will also need a monitor with a refresh 
+rate of at least 100Hz (120Hz is better). <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p><p class="line874">On
+ Linux you need to connect the IR (or radio) transmitter directly to the
+ graphics card.  Transmitters that plug into USB do not work on Linux 
+(they may work on Mac but I have not tried).  To connect directly to the
+ graphics card use the '3-pin mini-din to 1/8" stereo cable' that comes 
+with the 3DVision kit.   <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></p><p class="line867"><strong>Many NVIDIA cards that support stereo DO NOT come with a '3-pin mini-din' connector on them.</strong>
+  If you do not see a round 3-pin 'mini-din' connector on the back of 
+your graphics card (next to the DVI/VGA/etc connectors) then you need to
+ buy a separate "NVIDIA Quadro Stereo Board Connector".  PNY sells one: 
+Search for part number "QSP-STRBOARD-PB"  <strong>This will only work with Quadro cards that support quad buffer stereo.</strong> Check <a class="http" href="http://www.nvidia.com/object/quadro_pro_graphics_boards_linux.html">the NVIDIA website</a> for your card to be sure your card will work before buying the board connector. <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span></p><p class="line874">On linux you can tell what kind of graphics card you have by running <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span></p><pre><span class="anchor" id="line-1-2"></span>   lspci | grep VGA</pre><span class="anchor" id="line-57"></span><p class="line874">If it does not say "Quadro" then it probably does not support stereo. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p><p class="line874">You
+ will need to connect the display directly to the graphics card with a 
+DVI Dual-link cable. (Single link DVI will not work.  Display-port to 
+DVI will not work.  HDMI works at 60Hz which is too slow and you will 
+quickly get a headache.) <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p><p class="line867">
+</p><h3 id="Using_AMD_hardware">Using AMD hardware</h3>
+<span class="anchor" id="line-62"></span><p class="line874">I believe 
+some high end AMD graphics cards support quad-buffer stereo, but I do 
+not know which ones.  If you have information on this please add it 
+here.  <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span></p><p class="line867">
+</p><h2 id="Setting_up_X_.28in_Linux.29_to_support_stereo">Setting up X (in Linux) to support stereo</h2>
+<span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line867">
+</p><h3 id="NVIDIA">NVIDIA</h3>
+<span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line867">
+</p><h4 id="Install_binary_drivers">Install binary drivers</h4>
+<span class="anchor" id="line-69"></span><p class="line874">Be sure you are using the NVIDIA binary drivers.  Run <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span></p><pre><span class="anchor" id="line-1-3"></span>  sudo apt-get install nvidia-settings
+<span class="anchor" id="line-2-2"></span>  nvidia-settings</pre><span class="anchor" id="line-74"></span><p class="line874">If
+ you are using the NVIDIA binary drivers this will work -- go on to the 
+next step.  If not the program will inform you that you are not using 
+the NVIDIA binary drivers. <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span></p><p class="line862">Search the web for <a class="http" href="http://lmgtfy.com/?q=install+nvidia+linux+drivers">Install NVIDIA drivers</a> <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span></p><p class="line867">
+</p><h4 id="Set_resolution.2C_refresh_rate.2C_and_stereo_mode">Set resolution, refresh rate, and stereo mode</h4>
+<span class="anchor" id="line-79"></span><p class="line874">Run <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span></p><pre><span class="anchor" id="line-1-4"></span>  nvidia-settings</pre><span class="anchor" id="line-83"></span><p class="line874">Click
+ on "X Server Display Configuration".  If you have multiple monitors 
+choose the one you want to setup for stereo.  Select the Resolution (do 
+not choose "Auto").  Select the refresh rate (to the right of 
+"Resolution").  You want a refresh rate at least 100Hz (120Hz or faster 
+is better).  Click "Apply". <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span></p><p class="line874">Assuming
+ everything works you need to save these settings.  Click the button 
+"Save to X Configuration File" and follow the prompts to save the file 
+as /tmp/xorg.conf <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span></p><p class="line874">Now you have to add the stereo setting.  Open a terminal and run these commands: <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></p><pre><span class="anchor" id="line-1-5"></span>  cd /tmp
+<span class="anchor" id="line-2-3"></span>  nvidia-xconfig -c xorg.conf -o xorg.conf --stereo=10</pre><span class="anchor" id="line-92"></span><p class="line862">Note: "10" means "NVIDIA 3D VISION".  If you have "NVIDIA 3D VISION PRO" use 11.  For other settings run <strong>man nvidia-xconfig</strong> and search for stereo. <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span></p><pre><span class="anchor" id="line-1-6"></span>  sudo cp /etc/X11/xorg.conf /etc/X11/xorg.conf.original-no-stereo
+<span class="anchor" id="line-2-4"></span>  cp xorg.conf /etc/X11/xorg.conf</pre><span class="anchor" id="line-97"></span><p class="line874">Now restart X by logging out and logging back in. <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span></p><p class="line874">To verify that stereo is enabled run <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span></p><pre><span class="anchor" id="line-1-7"></span>   nvidia-settings</pre><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line874">Click on "X Screen 0" and look at the "Stereo Mode" setting.  It should say "NVIDIA 3D Vision Stereo" <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span></p><p class="line867">
+</p><h2 id="Known-working_Stereo_Hardware">Known-working Stereo Hardware</h2>
+<span class="anchor" id="line-107"></span><p class="line874">Please add to this section if you have stereo working on your system. <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span></p><p class="line874">*
+ WORKS: NVIDIA Quadro K4000, ASUS VG278H monitor (comes with 3DVision 
+glasses), DVI dual-link cable.  IR transmitter is built into the 
+monitor. <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span></p><p class="line867">
+</p><h2 id="Testing_stereo_hardware">Testing stereo hardware</h2>
+<span class="anchor" id="line-112"></span><p class="line874">To verify that your stereo hardware is working run <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span></p><pre><span class="anchor" id="line-1-8"></span>   sudo apt-get install mesa-utils
+<span class="anchor" id="line-2-5"></span>   glxgears -stereo</pre><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line874">If
+ you have multiple monitors, drag the gears window to the monitor with 
+stereo support.  You should see a double image.  Put on your 3D Glasses.
+  You should see the image in stereo.  To see it better resize the 
+window (make it bigger) and use the arrow keys to rotate the gears 
+around.  If it looks funny try running <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span></p><pre><span class="anchor" id="line-1-9"></span>   nvidia-settings</pre><span class="anchor" id="line-122"></span><p class="line874">click on "OpenGL Settings" and check the "Exchange Stereo Eyes" button. <span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span></p><p class="line867">
+</p><h3 id="troubleshooting">troubleshooting</h3>
+<span class="anchor" id="line-125"></span><p class="line874">I have 
+found that once the computer goes to sleep or if the monitor is turned 
+off that the monitor stops transmitting the stereo signal to the glasses
+ after the computer wakes up and the monitor is turned on.  If you 
+cannot get stereo to work try this: Shut down the computer.  Leave the 
+monitor turned on.  Power on the computer.  Now it should work (at least
+ until the computer goes to sleep again). <span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span></p><p class="line867">
+</p><h2 id="Building_Rviz_to_render_in_stereo">Building Rviz to render in stereo</h2>
+<span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><p class="line874">Ogre
+ (the graphics library that Rviz uses) does not currently support stereo
+ rendering by default.  To enable stereo rendering you will have to 
+build Rviz and a custom version of Ogre from source. <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span></p><p class="line862">Do not bother with this until you have confirmed that your graphics card and monitor work in stereo (see <a class="http" href="http://wiki.ros.org/rviz/Tutorials/Rviz%20in%20Stereo#Testing_stereo_hardware">Testing stereo hardware</a>).  Rviz will not render in stereo if <strong>glxgears -stereo</strong> does not render in stereo. <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span></p><p class="line867">
+</p><h3 id="Building_Ogre_for_Stereo">Building Ogre for Stereo</h3>
+<span class="anchor" id="line-135"></span><p class="line874">Get the sources, build and install. <span class="anchor" id="line-136"></span>Rviz only works with versions of Ogre older than 1.8, so checkout that tag. <span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span></p><p class="line867"><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span></p><pre><span class="anchor" id="line-1-10"></span>    cd $HOME
+<span class="anchor" id="line-2-6"></span>    mkdir my-ogre
+<span class="anchor" id="line-3-2"></span>    cd my-ogre
+<span class="anchor" id="line-4-2"></span>    hg clone https://bitbucket.org/sinbad/ogre
+<span class="anchor" id="line-5-2"></span>    cd ogre
+<span class="anchor" id="line-6-2"></span>    hg pull &amp;&amp; hg update v1-8
+<span class="anchor" id="line-7-2"></span>    cd ..
+<span class="anchor" id="line-8-2"></span>    mkdir build
+<span class="anchor" id="line-9-2"></span>    cd build
+<span class="anchor" id="line-10-2"></span>    cmake 
+-DOGRE_FULL_RPATH=ON -DOGRE_CONFIG_ENABLE_QUAD_BUFFER_STEREO=ON 
+-DCMAKE_INSTALL_PREFIX:PATH="/usr/local" 
+-DFREETYPE_INCLUDE_DIR:PATH="/usr/include/freetype2" 
+-DFREETYPE_FT2BUILD_INCLUDE_DIR:PATH="/usr/include/freetype2" ../ogre
+<span class="anchor" id="line-11-2"></span>    make install</pre><span class="anchor" id="line-151"></span><p class="line874">Note: This installs Ogre into /usr/local.  <span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span></p><p class="line867">
+</p><h3 id="Building_Rviz_for_Stereo">Building Rviz for Stereo</h3>
+<span class="anchor" id="line-154"></span><p class="line874">First 
+create a workspace to build Rviz.  (If you already have a workspace you 
+can use the existing one instead of creating a new "my-rviz-workspace" 
+workspace.) <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span></p><pre><span class="anchor" id="line-1-11"></span>    cd $HOME
+<span class="anchor" id="line-2-7"></span>    mkdir -p my-rviz-workspace/src
+<span class="anchor" id="line-3-3"></span>    cd my-rviz-workspace/src
+<span class="anchor" id="line-4-3"></span>    git clone https://github.com/ros-visualization/rviz.git
+<span class="anchor" id="line-5-3"></span>    cd ..
+<span class="anchor" id="line-6-3"></span>    
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:${PKG_CONFIG_PATH} catkin_make 
+--cmake-args -DCMAKE_SHARED_LINKER_FLAGS:STRING=" 
+-Wl,-rpath,/usr/local/lib" 
+-DCMAKE_CXX_FLAGS:STRING="-DOGRE_STEREO_ENABLE=1" -DUseQt5:BOOL="0"</pre><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><p class="line874">Run your new rviz compiled binary manually: <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span></p><pre><span class="anchor" id="line-1-12"></span>    roscore &amp; ./devel/lib/rviz/rviz</pre><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><p class="line874">If your hardware doesn't support quad buffer stereo rviz might segfault at this point.  <span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span></p><p class="line874">Add a display (e.g. an Axis Display) so there is something to look at. <span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span></p><p class="line874">If your HW supports stereo you should see a double image.  Put on the glasses to see it in stereo.  <span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span></p><p class="line867">
+</p><h2 id="Adjusting_stereo_properties_in_Rviz">Adjusting stereo properties in Rviz</h2>
+<span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><p class="line874">Properties
+ in the "View Controller" panel can be used to set eye-separation, 
+focal-distance, to swap the eyes, and disable stereo. <span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span></p><p class="line874">If you do not see the "Views" panel (by default in upper right) then click the "Panels" menu item and check "Views". <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span></p><p class="line874">In the "Current View" you will see some properties that can be used to adjust the stereo rendering: <span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span></p><ul><li><p class="line891"><strong>Enable Stereo Rendering</strong>: uncheck this to turn off stereo. <span class="anchor" id="line-184"></span></p></li><li><p class="line891"><strong>Swap Stereo Eyes</strong>: check this if Rviz has gotten confused and has swapped the left and right eyes. <span class="anchor" id="line-185"></span></p></li><li><p class="line891"><strong>Stereo Eye Separation</strong>: Use larger values for greater stereo effect.  Ideally this is the distance between your eyes (in meters). <span class="anchor" id="line-186"></span></p></li><li><p class="line891"><strong>Stereo Focal Distance</strong>: Set this to the distance between your eyes and the monitor.  Smaller values tend to produce a greater stereo effect. <span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span></p></li></ul><p class="line867"><span class="anchor" id="line-194"></span></p><p class="line867"><span class="anchor" id="line-195"></span></p><p class="line867"><span class="anchor" id="line-196"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: rviz/Tutorials/Rviz in Stereo  (last edited 2016-10-21 15:06:52 by <span title="Zoe Snape @ 38.97.68.126.ptr.i2c.com[38.97.68.126]"><a href="http://wiki.ros.org/Zoe%20Snape" title="Zoe Snape @ 38.97.68.126.ptr.i2c.com[38.97.68.126]">Zoe Snape</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="rviz_Tutorials_Rviz%20in%20Stereo%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

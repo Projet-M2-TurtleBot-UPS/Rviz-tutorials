@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/nr-1044.js"></script><script type="text/javascript" async="" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/ga.js"></script><script src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGktDXR8bHQ==","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":156}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>rviz/Tutorials/Interactive Markers: Getting Started - ROS Wiki</title>
+<script type="text/javascript" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=print">
+<link rel="Up" href="http://wiki.ros.org/rviz/Tutorials">
+<link rel="Appendix" title="basic_controls.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=basic_controls.png">
+<link rel="Appendix" title="cube.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=cube.png">
+<link rel="Appendix" title="interactive_marker_architecture.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=interactive_marker_architecture.png">
+<link rel="Appendix" title="interactive_marker_structure.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=interactive_marker_structure.png">
+<link rel="Appendix" title="menu.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=menu.png">
+<link rel="Appendix" title="pong.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=pong.png">
+<link rel="Appendix" title="simple_marker.png" href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started?action=AttachFile&amp;do=view&amp;target=simple_marker.png">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_10year_montage'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="https://events.osrfoundation.org/civicrm/?page=CiviCRM&q=civicrm/petition/sign&sid=9&reset=1">Submit your video clips to be included in the ROS 10 Year Montage!<br>
+      The deadline for submission is October 15th.</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" height="51" border="0" width="238"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" height="53" width="1024"><nobr><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_left.png" alt="" height="53" width="17"><a href="http://wiki.ros.org/"><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" height="53" border="0" width="237"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/browse/"><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" height="53" border="0" width="268"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://www.ros.org/news"><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_news.png" alt="News" height="53" border="0" width="84"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_spacer.png" height="53" width="69"><a href="http://wiki.ros.org/ROS/Installation"><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" height="53" border="0" width="151"></a><img src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/menu_right.png" height="53" width="60"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/rviz">rviz</a></li><li><a href="http://wiki.ros.org/rviz/Tutorials">Tutorials</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started?action=fullsearch&amp;context=180&amp;value=linkto%3A%22rviz%2FTutorials%2FInteractive+Markers%3A+Getting+Started%22" rel="nofollow" title="Click to do a full-text search for this title">Interactive Markers: Getting Started</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started">Interactive...ing Started</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/rviz/Tutorials/Interactive%20Markers:%20Getting%20Started">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867"><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span></p><div><table><tbody><tr>  <td style="background-color: #cce0ff"><strong>Note:</strong> This tutorial assumes that you have completed the previous tutorials:   <a href="http://wiki.ros.org/ROS/Tutorials">ROS Tutorials</a>. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span><span class="anchor" id="line-6-1"></span><div><table><tbody><tr>  <td style="background-color: #bbceee"> <img alt="(!)" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/idea.png" title="(!)" height="15" width="15"> Please ask about problems and questions regarding this tutorial on <a class="http" href="http://answers.ros.org/">answers.ros.org</a>.
+ Don't forget to include in your question the link to this page, the 
+versions of your OS &amp; ROS, and also add appropriate tags.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span><span class="anchor" id="line-9-1"></span>
+<h1 id="Interactive_Markers:_Getting_Started">Interactive Markers: Getting Started</h1>
+<span class="anchor" id="line-10-1"></span><strong>Description:</strong> This tutorial explains what Interactive Marker are and teaches you some of the basic concepts.<br>
+<br>
+ <span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><span class="anchor" id="line-14-1"></span><strong>Tutorial Level:</strong> BEGINNER<br>
+ <br>
+ <span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><strong>Next Tutorial:</strong>   <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server">Interactive Markers: Writing a Simple Interactive Marker Server</a> <br>
+ <br>
+  <span class="anchor" id="line-17-1"></span><p class="line874"> <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p><p class="line867"></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#Intro">Intro</a></li><li>
+<a href="#Further_Documentation">Further Documentation</a></li><li>
+<a href="#The_interactive_marker_tutorials_Package">The interactive_marker_tutorials Package</a><ol><li>
+<a href="#How_To_Run_The_Tutorials">How To Run The Tutorials</a></li><li>
+<a href="#simple_marker">simple_marker</a></li><li>
+<a href="#basic_controls">basic_controls</a></li><li>
+<a href="#menu">menu</a></li><li>
+<a href="#pong">pong</a></li><li>
+<a href="#cube">cube</a></li></ol></li></ol></div><p class="line874"> <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span></p><p class="line867">
+</p><h2 id="Intro">Intro</h2>
+<span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line874">Interactive
+ markers are similar to the "regular" markers described in the previous 
+tutorials, however they allow the user to interact with them by changing
+ their position or rotation, clicking on them or selecting something 
+from a context menu assigned to each marker.  <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></p><p class="line862">They are represented by the <a href="http://docs.ros.org/api/visualization_msgs/html/msg/InteractiveMarker.html">visualization_msgs/InteractiveMarker</a> message, which contains a context menu and several controls (<a href="http://docs.ros.org/api/visualization_msgs/html/msg/InteractiveMarkerControl.html">visualization_msgs/InteractiveMarkerControl</a>). The controls define the different visual parts of the interactive marker, can consist of several regular markers (<a href="http://docs.ros.org/api/visualization_msgs/html/msg/Marker.html">visualization_msgs/Marker</a>) and can each have a different function. <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></p><p class="line867"><img alt="The structure of an &lt;&lt;MsgLink(visualization_msgs/InteractiveMarker)&gt;&gt; message" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_002.png" title="The structure of an &lt;&lt;MsgLink(visualization_msgs/InteractiveMarker)&gt;&gt; message"> <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span></p><p class="line862">If you want to create a node providing a set of interactive markers, you need to instantiate an <tt class="backtick">InteractiveMarkerServer</tt>
+ object. This will handle the connection to the client (usually RViz) 
+and make sure that all changes you make are being transmitted and that 
+your application is being notified of all the actions the user performs 
+on the interactive markers. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span></p><p class="line867"><img alt="interactive_marker_architecture.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_004.png" title="interactive_marker_architecture.png"> <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span></p><p class="line867">
+</p><h2 id="Further_Documentation">Further Documentation</h2>
+<span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line862">To
+ find out more about how to use interactive markers, refer to this and 
+the following tutorials. The source code used can be found in the <a href="http://wiki.ros.org/interactive_marker_tutorials">interactive_marker_tutorials</a> package. <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span></p><p class="line862">For writing applications using interactive markers, you will most likely use the interfaces provided in the <a href="http://wiki.ros.org/interactive_markers">interactive_markers</a> package. Refer to the <a class="http" href="http://www.ros.org/doc/api/interactive_markers/html/">Code API</a> for more information. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></p><p class="line862">The
+ messages used to describe interactive markers themselves contain a 
+detailed description of all their parameters. Of main interest are <a href="http://docs.ros.org/api/visualization_msgs/html/msg/InteractiveMarker.html">visualization_msgs/InteractiveMarker</a>, <a href="http://docs.ros.org/api/visualization_msgs/html/msg/InteractiveMarkerControl.html">visualization_msgs/InteractiveMarkerControl</a> and <a href="http://docs.ros.org/api/visualization_msgs/html/msg/InteractiveMarkerFeedback.html">visualization_msgs/InteractiveMarkerFeedback</a>. The recommended way to create context menus is using the <a class="http" href="http://www.ros.org/doc/api/interactive_markers/html/classinteractive__markers_1_1MenuHandler.html">MenuHandler</a> interface, so you will not have to deal with the underlying messages. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></p><p class="line867">
+</p><h2 id="The_interactive_marker_tutorials_Package">The interactive_marker_tutorials Package</h2>
+<span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><p class="line862">The best way to understand what interactive markers do is by trying out the examples contained in the <a href="http://wiki.ros.org/interactive_marker_tutorials">interactive_marker_tutorials</a> package. It contains five examples: <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started#simple_marker">simple_marker</a>, <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started#basic_controls">basic_controls</a>, <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started#menu">menu</a>, <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started#pong">pong</a> and <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Getting%20Started#cube">cube</a>. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></p><p class="line867">
+</p><h3 id="How_To_Run_The_Tutorials">How To Run The Tutorials</h3>
+<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line862">The procedure to run the tutorials is basically the same in all case. E.g. to run <strong>basic_controls</strong>, open a terminal and type <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span></p><p class="line867"><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span></p><pre><span class="anchor" id="line-1-2"></span>rosrun interactive_marker_tutorials basic_controls</pre><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line874">This
+ will start the node which contains the interactive marker server. Then,
+ start RViz by running the following command in a separate terminal: <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span></p><p class="line867"><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span></p><pre><span class="anchor" id="line-1-3"></span>rosrun rviz rviz</pre><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line874">In RViz, do the following: <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></p><ul><li>Set the fixed frame to '/base_link'. <span class="anchor" id="line-66"></span></li><li><p class="line891"><strong>Add an 'Interactive Markers' display</strong> by clicking on 'Add' in the 'Displays' panel.  <span class="anchor" id="line-67"></span></p></li><li><p class="line891"><strong>Set the update topic of this display to '/basic_controls/update'.</strong> This should immediately bring up several grey cubes in rviz.  <span class="anchor" id="line-68"></span></p></li><li><p class="line891"><strong>Now select 'Interact' in the tool panel.</strong>
+ This will enable all interactive elements in the main view, which will 
+bring up additional arrows and rings around the boxes. You can 
+left-click on these controls and in some case on the box itself to 
+change the pose of each interactive marker. Some markers have a context 
+menu which you can access by right-clicking on them. <span class="anchor" id="line-69"></span></p></li><li><p class="line891"><strong>Add a 'Grid' display.</strong> This is a useful visual clue for perceiving how the markers move in space while you drag them. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span></p></li></ul><p class="line867"><span class="anchor" id="simple_marker"></span> <span class="anchor" id="line-72"></span>
+</p><h3 id="simple_marker-1">simple_marker</h3>
+<span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line862">Code (C++): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/simple_marker.cpp">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/simple_marker.cpp</a> <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span></p><p class="line862">Code (Python) <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/simple_marker.py">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/simple_marker.py</a> <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span></p><p class="line862">This example will display a minimalist marker in RViz. See <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Writing%20a%20Simple%20Interactive%20Marker%20Server">Writing a Simple Interactive Marker Server</a> for more details. <span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span></p><p class="line867"><img alt="simple_marker.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%2520Markers%2520Getting%2520Started.png" title="simple_marker.png" width="100%"> <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span></p><p class="line867"><span class="anchor" id="basic_controls"></span> <span class="anchor" id="line-83"></span>
+</p><h3 id="basic_controls-1">basic_controls</h3>
+<span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><p class="line862">Code (C++): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/basic_controls.cpp">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/basic_controls.cpp</a> <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span></p><p class="line862">Code (Python): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/basic_controls.py">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/basic_controls.py</a> <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span></p><p class="line862">Displays a selection of interactive markers that can be manipulated in different ways. It is explained in more detail in the <a href="http://wiki.ros.org/rviz/Tutorials/Interactive%20Markers%3A%20Basic%20Controls">Basic Controls</a> tutorial. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></p><p class="line867"><img alt="basic_controls.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_003.png" title="basic_controls.png" width="100%"> <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span></p><p class="line867"><span class="anchor" id="menu"></span> <span class="anchor" id="line-94"></span>
+</p><h3 id="menu-1">menu</h3>
+<span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><p class="line862">Code (C++): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/menu.cpp">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/menu.cpp</a> <span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span></p><p class="line862">Code (Python): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/menu.py">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/menu.py</a> <span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span></p><p class="line874">Shows
+ how to manage a more complex context menu associated with an 
+interactive marker, including hiding entries and adding check boxes. <span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span></p><p class="line867"><img alt="menu.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_005.png" title="menu.png" width="100%"> <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span></p><p class="line867"><span class="anchor" id="pong"></span> <span class="anchor" id="line-105"></span>
+</p><h3 id="pong-1">pong</h3>
+<span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><p class="line862">Code (C++): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/pong.cpp">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/pong.cpp</a> <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span></p><p class="line862">Lets you play the classic arcade game with one or two players in rviz. It is meant to <span class="strike">distract you from your work</span>- demonstrate the two-way interaction between an interactive marker server and multiple clients.  <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span></p><p class="line874">If
+ you open two instances of RViz on different computers that are 
+connected to the same pong server, you can play against each other. 
+Otherwise, the computer will take control of the unused paddle. <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span></p><p class="line867"><img alt="pong.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_006.png" title="pong.png" width="100%"> <span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span></p><p class="line867"><span class="anchor" id="cube"></span> <span class="anchor" id="line-116"></span>
+</p><h3 id="cube-1">cube</h3>
+<span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line862">Code (C++): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/cube.cpp">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/src/cube.cpp</a> <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span></p><p class="line862">Code (Python): <a class="https" href="https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/cube.py">https://github.com/ros-visualization/visualization_tutorials/blob/indigo-devel/interactive_marker_tutorials/scripts/cube.py</a> <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span></p><p class="line874">Demonstrates how to procedurally create and manage a large number of interactive markers. <span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span></p><p class="line867"><img alt="cube.png" class="attachment" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/Interactive%252520Markers%252520Getting%252520Started_007.png" title="cube.png" width="100%"> <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span></p><p class="line867"><span class="anchor" id="line-128"></span></p><p class="line867"><span class="anchor" id="line-129"></span></p><p class="line867"><span class="anchor" id="line-130"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: rviz/Tutorials/Interactive Markers: Getting Started  (last edited 2016-05-23 23:57:34 by <span title="DHood @ 70-35-50-58.static.wiline.com[70.35.50.58]"><a class="nonexistent" href="http://wiki.ros.org/DHood" title="DHood @ 70-35-50-58.static.wiline.com[70.35.50.58]">DHood</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="rviz_Tutorials_Interactive%20Markers:%20Getting%20Started%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>
